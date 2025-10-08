@@ -1,21 +1,36 @@
-function onclik()
-{
-  const inputText=document.querySelector('input').value;
-  if(inputText.length==0)
+let ctr=3;
+let todos=[
   {
-    return;
+    id:1,
+    description:"go to gym"
+  },{
+    id:2,
+    description:"have dinner"
   }
-  const listElement = document.createElement("div");
-  const size=document.createElement("h4");
-  size.innerHTML=inputText;
-  const button = document.createElement("button");
-  button.innerHTML="delete";
-  listElement.appendChild(size);
-  listElement.appendChild(button);
-  const outerList=document.getElementsByClassName("outerdiv");
-  outerList[0].appendChild(listElement);
-  button.addEventListener("click",function(){
-    listElement.remove();
-  })
+]
+function addTodo()
+{
+  todos.push(
+    {
+      id:ctr++,
+      description:document.querySelector("input").value.trim()
+    }
+  )
+  render(todos)
   document.querySelector("input").value="";
 }
+
+function render(todos)
+{
+  const list=document.getElementById('root');
+  list.innerHTML="";
+  todos.forEach(todo=>{
+    const div= document.createElement("div");
+    const h4=document.createElement("h4");
+    h4.textContent=todo.description;
+    div.appendChild(h4);
+    div.setAttribute('data-id',todo.id);
+    list.appendChild(div);
+  })
+}
+render(todos);
