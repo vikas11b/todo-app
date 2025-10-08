@@ -19,7 +19,16 @@ function addTodo()
   render(todos)
   document.querySelector("input").value="";
 }
-
+function deleteLast()
+{
+  todos.splice(todos.length-1,1);
+  render(todos)
+}
+function deleteFirst()
+{
+  todos.splice(0,1)
+  render(todos)
+}
 function render(todos)
 {
   const list=document.getElementById('root');
