@@ -1,17 +1,25 @@
-# Simple To-Do List with Delete Functionality
+# 📝 Simple Todo App (DOM with State and Rendering)
 
-This is a small JavaScript project that allows you to add items to a list and delete them dynamically. It demonstrates basic DOM manipulation, event handling, and working with HTML elements.
+A lightweight JavaScript project that demonstrates how to manage **state**, **render dynamic UI**, and interact with the **DOM** — without any frameworks.
 
-## Features
+---
 
-- Add items to a list by typing in an input field and clicking the **Add** button.
-- Each item is displayed as a heading (`h4`) with a **Delete** button.
-- Click the **Delete** button to remove the corresponding item.
-- Input field is cleared automatically after adding an item.
+## 🚀 Features
 
-## Usage
+- Adds new todos dynamically.
+- Maintains state in a JavaScript array.
+- Re-renders the UI whenever the todo list changes.
+- Clears the input box automatically after adding a todo.
+- Simple, framework-free implementation using plain HTML, CSS, and JS.
 
-1. Open `index.html` in your browser.
-2. Type a task in the input box.
-3. Click **Add** to add it to the list.
-4. Click **Delete** next to any task to remove it.
+---
+
+## 🧠 Concepts Covered
+
+- **DOM Manipulation**
+- **State Management** using arrays
+- **Dynamic Rendering** with `innerHTML` and `createElement`
+- **Event Handling** (button clicks)
+- **Re-rendering** UI after state updates
+
+
